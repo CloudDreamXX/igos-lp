@@ -1,0 +1,29 @@
+@import 'tailwindcss';
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+@theme {
+  --font-sans:
+    'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, sans-serif;
+}
+
+/* Apply globally to all HTML text */
+html {
+  @apply font-sans text-gray-900;
+}
+
+.noise-bg {
+  position: relative;
+  /* background: linear-gradient(to bottom, #f2f1f3, #bfaae5, #0f0f0f); */
+  overflow: hidden;
+}
+
+.noise-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url('https://grainy-gradients.vercel.app/noise.svg');
+  opacity: 0.25;
+  mix-blend-mode: multiply;
+  pointer-events: none;
+}
