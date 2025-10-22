@@ -10,7 +10,7 @@ export const FeatureSmallCard = ({ title, description }: FeatureSmallCardProps) 
         <img src="assets/img/plus-group.png" alt="Plus Icon" />
       </div>
 
-      <h4 className="text-[16px] font-normal text-[#D9D9D9]">{title}</h4>
+      <h4 className="text-[16px] font-normal text-[#D9D9D9] text-left">{title}</h4>
 
       <p className="text-[#8E9193] text-[14px] leading-[25px] text-left">{description}</p>
     </div>
