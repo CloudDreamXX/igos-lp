@@ -12,7 +12,7 @@ export const NiceToHavesSection = () => {
         <span>nice-to-haves</span>
       </h2>
 
-      <p className="text-[#ECECEC] max-w-xl text-[16px]/[26px] md:text-[18px]/[30px] mb-24">
+      <p className="text-[#ECECEC] max-w-xl text-[16px]/[26px] md:text-[19px]/[30px] mb-24">
         Designed to adapt to evolving needs of businesses, providing scalability reliability and
         security
       </p>

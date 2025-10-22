@@ -7,8 +7,8 @@ export const PaymentsSection = () => {
 
       <div className="text-center max-w-3xl mx-auto mb-44 relative">
         <p className="uppercase tracking-widest text-[#FFEEAA] text-sm mb-6">What we do</p>
-        <h2 className="text-[40px] md:text-6xl font-medium mb-7">Each Payment Counts!</h2>
-        <p className="text-[#ECECEC] text-[19px]/[27px] md:w-[670px] mx-auto font-normal">
+        <h2 className="text-[40px] md:text-[56px] font-medium mb-7">Each Payment Counts!</h2>
+        <p className="text-[#ECECEC] w-[304px] text-sm/loose md:text-[19px]/[27px] md:w-[670px] mx-auto font-normal">
           Discover how IGOS aggregates various Payment Service Providers (PSPs) under one roof,
           offering unparalleled flexibility and efficiency in managing online transactions.
         </p>
@@ -26,11 +26,16 @@ export const PaymentsSection = () => {
           </p>
         </div>
 
-        <div className="flex-1">
+        <div className="flex-1 relative">
+          <img
+            src={'assets/img/bg_vector-1.png'}
+            alt="Line decor"
+            className="absolute left-0 top-0 w-full pointer-events-none z-10"
+          />
           <img
             src={'assets/img/dashboard.jpg'}
             alt="Payments dashboard"
-            className="rounded-xl shadow-2xl mx-auto md:ml-auto w-full max-w-md h-[316px] md:h-[472px] object-cover object-center"
+            className="relative rounded-xl shadow-2xl mx-auto md:ml-auto w-full max-w-[509px] h-[316px] md:h-[472px] object-cover object-center z-20"
           />
         </div>
       </div>
@@ -40,13 +45,19 @@ export const PaymentsSection = () => {
           <h3 className="text-[34px]/[40px] md:text-[56px]/[62px] font-medium mb-4 text-[#ECECEC]">
             Data Enrichment
           </h3>
-          <p className="text-[#ECECEC] leading-relaxed max-w-md mt-8 text-[19px]/[30px]">
+          <p className="text-[#ECECEC] leading-relaxed max-w-md mt-8 text-[16px]/[26px] md:text-[19px]/[30px]">
             Player data insights are a secure and compliant way to access and interpret player bank
             data, turning it into actionable spending patterns.
           </p>
         </div>
 
         <div className="relative w-full md:w-1/2 flex justify-center items-center py-10 overflow-visible perspective-[1000px]">
+          <img
+            src={'assets/img/bg_vector-1.png'}
+            alt="Line decor"
+            className="absolute left-1/2 top-1/2 w-full transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-10 scale-x-[-1]"
+          />
+
           {/* Far left card (deepest layer) */}
           <img
             src="assets/img/card.png"

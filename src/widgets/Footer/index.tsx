@@ -11,8 +11,8 @@ export const Footer = () => {
           </div>
 
           <div className="w-fit md:text-left">
-            <h4 className="text-[12px] font-medium uppercase mb-8 tracking-wide">Company</h4>
-            <ul className="space-y-2 text-[16px]">
+            <h4 className="text-[12px] font-normal uppercase mb-8 tracking-wide">Company</h4>
+            <ul className="space-y-5 text-[16px]">
               <li>
                 <a href="#" className="hover:underline">
                   Cookie Policy

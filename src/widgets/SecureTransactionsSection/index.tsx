@@ -5,7 +5,7 @@ export const SecureTransactionsSection = () => {
         <h2 className="text-[34px]/[40px] md:text-[56px]/[62px] font-medium">
           Secure <br /> Transactions, <br /> Unwavering Trust
         </h2>
-        <p className="text-[#CFCFCF] text-[18px]/[28px] max-w-md mx-auto md:mx-0">
+        <p className="text-[#CFCFCF] text-[16px]/[26px] md:text-[19px]/[30px] max-w-md mx-auto md:mx-0">
           Designed to adapt to evolving needs of businesses, providing scalability, reliability, and
           security.
         </p>
