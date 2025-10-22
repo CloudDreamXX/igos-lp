@@ -32,9 +32,6 @@ const HeroSection = () => {
             <span className="block w-3 h-[2px] bg-black"></span>
             <span className="block w-3 h-[2px] bg-black"></span>
           </button>
-          <Button variant="primary" size="sm" className="ml-2">
-            Login
-          </Button>
         </div>
       </nav>
 

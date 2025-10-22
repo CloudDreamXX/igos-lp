@@ -24,7 +24,6 @@ export const PaymentSuccessChart = () => {
       <ResponsiveContainer width="100%" height="85%">
         <LineChart data={data}>
           <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#2C2C2C" />
-
           <XAxis
             dataKey="name"
             stroke="#888888"
@@ -41,17 +40,6 @@ export const PaymentSuccessChart = () => {
             domain={[0, 4000000]}
           />
 
-          <Tooltip
-            contentStyle={{
-              backgroundColor: '#2C2C2C',
-              border: 'none',
-              borderRadius: '8px',
-              color: '#fff',
-            }}
-            formatter={(value) => `${(Number(value) / 1000000).toFixed(1)}m`}
-          />
-
-          {/* Линии */}
           <Line
             type="monotone"
             dataKey="purple"
