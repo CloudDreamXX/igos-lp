@@ -8,13 +8,18 @@ const data = [
   { name: 'May', purple: 2600000, yellow: 1500000 },
 ];
 
+const CustomSquareDot = (props: { cx: any; cy: any; fill: any }) => {
+  const { cx, cy, fill } = props;
+  return <rect x={cx - 4} y={cy - 4} width={8} height={8} fill={fill} stroke="none" rx={0} />;
+};
+
 export const PaymentSuccessChart = () => {
   return (
     <div className="bg-[#1F1F1F] rounded-xl p-6 w-full max-w-[324px] h-[224px]">
       <h3 className="text-[#E3E3E3] text-[9px] font-normal mb-4">Payment success rate</h3>
 
       <ResponsiveContainer width="100%" height="85%">
-        <LineChart data={data}>
+        <LineChart data={data} margin={{ top: 10, right: 10, left: 0, bottom: 0 }}>
           <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#2C2C2C" />
           <XAxis
             dataKey="name"
@@ -22,6 +27,8 @@ export const PaymentSuccessChart = () => {
             tick={{ fill: '#A3A3A3', fontSize: 14 }}
             axisLine={false}
             tickLine={false}
+            height={55}
+            tickMargin={20}
           />
           <YAxis
             tickFormatter={(value) => `${value / 1000000}m`}
@@ -30,22 +37,22 @@ export const PaymentSuccessChart = () => {
             axisLine={false}
             tickLine={false}
             domain={[0, 4000000]}
+            width={55}
+            tickMargin={20}
           />
 
           <Line
-            type="monotone"
             dataKey="purple"
             stroke="#B9A3FF"
             strokeWidth={2}
-            dot={{ fill: '#B9A3FF', r: 5, strokeWidth: 0 }}
+            dot={<CustomSquareDot fill="#B9A3FF" cx={undefined} cy={undefined} />}
             activeDot={{ r: 6 }}
           />
           <Line
-            type="monotone"
             dataKey="yellow"
             stroke="#F5E48B"
             strokeWidth={2}
-            dot={{ fill: '#F5E48B', r: 5, strokeWidth: 0 }}
+            dot={<CustomSquareDot fill="#F5E48B" cx={undefined} cy={undefined} />}
             activeDot={{ r: 6 }}
           />
         </LineChart>
