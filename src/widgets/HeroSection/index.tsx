@@ -48,19 +48,19 @@ const HeroSection = () => {
         <div className="w-[268px] md:w-[700px] md:h-[400px] bg-black rounded-2xl shadow-lg relative">
           <img src="/assets/img/laptop.png" alt="Laptop Frame" className="w-[800px] h-auto" />
           <img src="/assets/img/dashboard.png" alt="Dashboard" className="w-[800px] h-[130px] md:h-[360px] object-cover absolute top-[10px] object-top" />
-          <div className="absolute z-20 -top-24 xl:-top-28 -left-32 xl:-left-48 scale-30 xl:scale-100">
+          <div className="absolute z-20 -top-24 lg:-top-28 -left-32 lg:-left-48 scale-30 lg:scale-100">
             <IgosCard />
           </div>
-          <div className="absolute z-20 xl:-left-20 left-1/2 transform -translate-x-1/2 xl:translate-0  bottom-0 xl:bottom-[50px] scale-30  xl:scale-100">
+          <div className="absolute z-20 lg:-left-20 left-1/2 transform -translate-x-1/2 lg:translate-0 bottom-0 lg:bottom-[50px] scale-30 lg:scale-100">
             <PaymentAmountCard />
           </div>
-          <div className="absolute z-20 w-[324px] -right-36 xl:-right-40 bottom-0 xl:bottom-[120px] scale-30 xl:scale-100">
+          <div className="absolute z-20 w-[324px] -right-36 lg:-right-40 bottom-0 lg:bottom-[120px] scale-30 lg:scale-100">
             <PaymentSuccessChart />
           </div>
 
-          <Plus className="absolute z-20 -left-16 xl:-left-[257px] top-1/2 transform -translate-y-1/2 text-[#FFEEAA] scale-30 xl:scale-100" />
-          <Plus className="absolute z-20 -right-12 -top-14 xl:-right-[100px] xl:-top-20 text-white scale-30 xl:scale-100" />
-          <Plus className="absolute z-20 -right-16 bottom-0 xl:-right-[260px] xl:bottom-10 scale-30 xl:scale-100" />
+          <Plus className="absolute z-20 -left-16 lg:-left-[257px] top-1/2 transform -translate-y-1/2 text-[#FFEEAA] scale-30 lg:scale-100" />
+          <Plus className="absolute z-20 -right-12 -top-14 lg:-right-[100px] lg:-top-20 text-white scale-30 lg:scale-100" />
+          <Plus className="absolute z-20 -right-16 bottom-0 lg:-right-[260px] lg:bottom-10 scale-30 lg:scale-100" />
         </div>
       </div>
 
