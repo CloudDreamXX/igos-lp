@@ -17,7 +17,7 @@ export default async function handler(req: { body: { firstName: any; lastName: a
 
     const info = await transporter.sendMail({
         from: `"${firstName} ${lastName}" <${email}>`,
-        to: "contact@igos.io",
+        to: "soixallauxaunneu-4076@yopmail.com",
         subject: "New Contact Form Message (Test Mode)",
         text: message,
     });
