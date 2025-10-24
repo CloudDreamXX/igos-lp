@@ -13,13 +13,13 @@ const HeroSection = () => {
 
         <div className="hidden md:flex gap-10 text-sm font-normal h-fit">
           <a
-            href="#"
+            href="#solutions"
             className="inline-flex items-center leading-none hover:text-gray-700 transition"
           >
             Solutions
           </a>
           <a
-            href="#"
+            href="#features"
             className="inline-flex items-center leading-none hover:text-gray-700 transition"
           >
             Features
@@ -31,7 +31,7 @@ const HeroSection = () => {
             Docs
           </a>
           <a
-            href="#"
+            href="#security"
             className="inline-flex items-center leading-none hover:text-gray-700 transition"
           >
             Security

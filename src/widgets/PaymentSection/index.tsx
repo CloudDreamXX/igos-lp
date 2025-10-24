@@ -2,7 +2,7 @@ import Plus from '../../shared/ui/icons/plus';
 
 export const PaymentsSection = () => {
   return (
-    <section className="relative bg-[#020202] text-white py-20 px-[30px] md:px-16 overflow-hidden">
+    <section id="solutions" className="relative bg-[#020202] text-white py-20 px-[30px] md:px-16 overflow-hidden">
       <div className="absolute inset-0 pointer-events-none opacity-10 bg-[radial-gradient(circle_at_30%_40%,#A58BFF_0%,transparent_60%)]"></div>
 
       <div className="text-center max-w-3xl mx-auto mb-44 relative">

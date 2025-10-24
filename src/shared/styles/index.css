@@ -12,6 +12,10 @@ html {
   @apply font-sans text-gray-900;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 .noise-bg {
   position: relative;
   /* background: linear-gradient(to bottom, #f2f1f3, #bfaae5, #0f0f0f); */

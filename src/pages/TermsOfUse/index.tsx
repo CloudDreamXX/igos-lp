@@ -11,7 +11,7 @@ export const TermsOfUse = () => {
                     />
                 </div>
                 <a
-                    href="/contact-us"
+                    href="#"
                     className="border border-[#212945] text-[#212945] rounded-full px-[25px] py-[9px] text-[19px] hover:bg-[#f2f3f5] transition"
                 >
                     Contact Us ↗

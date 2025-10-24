@@ -1,6 +1,6 @@
 export const SecureTransactionsSection = () => {
   return (
-    <section className="bg-[#020202] text-white flex flex-col md:flex-row items-center justify-between px-[31px] py-[55px] md:px-[148px] md:py-[164px] relative overflow-hidden">
+    <section id="security" className="bg-[#020202] text-white flex flex-col md:flex-row items-center justify-between px-[31px] py-[55px] md:px-[148px] md:py-[164px] relative overflow-hidden">
       <div className="w-full md:w-1/2 text-left space-y-6">
         <h2 className="text-[34px]/[40px] md:text-[56px]/[62px] font-medium">
           Secure <br /> Transactions, <br /> Unwavering Trust

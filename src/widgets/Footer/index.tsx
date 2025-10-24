@@ -14,23 +14,8 @@ export const Footer = () => {
             <h4 className="text-[12px] font-normal uppercase mb-8 tracking-wide">Company</h4>
             <ul className="space-y-5 text-[16px]">
               <li>
-                <a href="#" className="hover:underline">
-                  Cookie Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
                 <a href="/terms-of-use" className="hover:underline">
                   Terms and Conditions
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Website Security
                 </a>
               </li>
               <li>

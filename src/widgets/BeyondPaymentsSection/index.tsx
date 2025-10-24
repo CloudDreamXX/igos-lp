@@ -2,7 +2,7 @@ import { FeatureSmallCard } from '../../shared/ui/FeatureSmallCard';
 
 export const BeyondPaymentsSection = () => {
   return (
-    <section className="bg-[#1B1B1B] text-white pt-[68px] pb-[119px] flex flex-col items-center text-center px-[31px] py-[55px]">
+    <section id="features" className="bg-[#1B1B1B] text-white pt-[68px] pb-[119px] flex flex-col items-center text-center px-[31px] py-[55px]">
       {/* ====== Section Header ====== */}
       <p className="text-[#FFEEAA] text-[16px] tracking-[0.48px] uppercase mb-12">Features</p>
 
