@@ -8,7 +8,7 @@ export const PaymentsSection = () => {
       <div className="text-center max-w-3xl mx-auto mb-44 relative">
         <p className="uppercase tracking-widest text-[#FFEEAA] text-sm mb-6">What we do</p>
         <h2 className="text-[40px] md:text-[56px] font-medium mb-7">Each Payment Counts!</h2>
-        <p className="text-[#ECECEC] w-[304px] text-sm/loose md:text-[19px]/[27px] md:w-[670px] mx-auto font-normal">
+        <p className="text-[#ECECEC] w-[304px] text-[16px]/[26px] md:text-[19px]/[27px] md:w-[670px] mx-auto font-normal">
           Discover how IGOS aggregates various Payment Service Providers (PSPs) under one roof,
           offering unparalleled flexibility and efficiency in managing online transactions.
         </p>
