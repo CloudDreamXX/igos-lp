@@ -62,6 +62,7 @@ const HeroSection = () => {
       <div className="relative mt-16 flex justify-center">
         <div className="w-[268px] md:w-[700px] md:h-[400px] bg-black rounded-2xl shadow-lg relative">
           <img src="/assets/img/laptop.png" alt="Laptop Frame" className="w-[800px] h-auto" />
+          <img src="/assets/img/dashboard.png" alt="Dashboard" className="w-[800px] h-[360px] object-cover absolute top-[10px] object-top" />
           <div className="absolute z-20 -top-24 md:-top-28 -left-32 md:-left-48 scale-30 md:scale-100">
             <IgosCard />
           </div>

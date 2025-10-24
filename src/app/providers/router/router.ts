@@ -2,6 +2,7 @@ import type { RouteObject } from 'react-router-dom';
 import { createElement } from 'react';
 import { HomePage } from '../../../pages/HomePage';
 import { Dashboard } from '../../../pages/Dashboard';
+import { TermsOfUse } from '../../../pages/TermsOfUse';
 
 export const routes: RouteObject[] = [
   {
@@ -9,4 +10,5 @@ export const routes: RouteObject[] = [
     element: createElement(HomePage),
   },
   { path: '/dashboard', element: createElement(Dashboard) },
+  { path: '/terms-of-use', element: createElement(TermsOfUse) },
 ];
