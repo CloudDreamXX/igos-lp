@@ -18,7 +18,7 @@ export const TermsOfUse = () => {
                 </div>
                 <Button
                     onClick={() => setIsModalOpen(true)}
-                    className="border border-[#212945] text-[#212945] rounded-full px-[25px] py-[9px] text-[19px] hover:bg-[#f2f3f5] transition"
+                    className="bg-white border border-[#212945] text-[#212945] rounded-full px-[25px] py-[9px] text-[19px] hover:bg-[#f2f3f5] transition"
                 >
                     Contact Us ↗
                 </Button>
