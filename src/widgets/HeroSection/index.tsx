@@ -3,8 +3,12 @@ import { IgosCard } from './IgosCard';
 import { PaymentAmountCard } from './PaymentAmountCard';
 import { PaymentSuccessChart } from './PaymentSuccessChart';
 import Plus from '../../shared/ui/icons/plus';
+import { useState } from 'react';
+import { ContactUs } from './ContactUs';
 
 const HeroSection = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   return (
     <div className="relative min-h-screen bg-[linear-gradient(180deg,#FFFFFF_0%,#D7BFFF_50%,#000000_100%)] bg-cover bg-center text-black flex flex-col">
       <div className="absolute inset-0 bg-[url('/assets/img/bg-illustration.svg')] bg-cover bg-center opacity-30"></div>
@@ -54,7 +58,7 @@ const HeroSection = () => {
         <p className="mt-4 text-sm md:text-[16px] tracking-wider text-[#020202] uppercase">
           Your go to for seamless transactions
         </p>
-        <Button variant="secondary" size="lg" className="mt-8">
+        <Button onClick={(e) => { e.preventDefault(); setIsModalOpen(true); }} variant="secondary" size="lg" className="mt-8">
           Contact us
         </Button>
       </div>
@@ -78,6 +82,10 @@ const HeroSection = () => {
           <Plus className="absolute z-20 -right-16 bottom-0 md:-right-[260px] md:bottom-10 scale-30 md:scale-100" />
         </div>
       </div>
+
+      {isModalOpen && (
+        <ContactUs onClose={() => setIsModalOpen(false)} />
+      )}
     </div>
   );
 };

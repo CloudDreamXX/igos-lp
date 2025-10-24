@@ -1,4 +1,10 @@
+import { useState } from "react";
+import { Button } from "../../shared/ui/Button";
+import { ContactUs } from "../../widgets/HeroSection/ContactUs";
+
 export const TermsOfUse = () => {
+    const [isModalOpen, setIsModalOpen] = useState<boolean>(false)
+
     return (
         <div className="bg-white text-[#1a1a1a] font-sans min-h-screen">
             {/* Header */}
@@ -10,12 +16,12 @@ export const TermsOfUse = () => {
                         className="w-[150px] h-auto"
                     />
                 </div>
-                <a
-                    href="#"
+                <Button
+                    onClick={() => setIsModalOpen(true)}
                     className="border border-[#212945] text-[#212945] rounded-full px-[25px] py-[9px] text-[19px] hover:bg-[#f2f3f5] transition"
                 >
                     Contact Us ↗
-                </a>
+                </Button>
             </header>
 
             {/* Content */}
@@ -189,6 +195,10 @@ export const TermsOfUse = () => {
                     </div>
                 </section>
             </main>
+
+            {isModalOpen && (
+                <ContactUs onClose={() => setIsModalOpen(false)} />
+            )}
 
             {/* Footer */}
             <footer className="border-t py-6 text-center text-sm text-gray-600">
