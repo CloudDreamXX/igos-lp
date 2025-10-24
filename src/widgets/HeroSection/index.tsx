@@ -42,7 +42,7 @@ const HeroSection = () => {
           </a>
         </div>
 
-        <div className="flex items-center">
+        <div className="md:hidden flex items-center">
           <button className=" bg-white rounded-full flex flex-col items-center justify-center gap-[2px] p-3.5 hover:cursor-pointer hover:shadow-">
             <span className="block w-3 h-[2px] bg-black"></span>
             <span className="block w-3 h-[2px] bg-black"></span>
