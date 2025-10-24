@@ -1,6 +1,6 @@
 export const Footer = () => {
   return (
-    <footer className="bg-[#1B1B1B] px-[27px] md:px-[36px] py-[34px] md:py-[50px]">
+    <footer id="security" className="bg-[#1B1B1B] px-[27px] md:px-[36px] py-[34px] md:py-[50px]">
       <div className="bg-[#FFEEAA] px-8 py-10 rounded-3xl md:h-[448px] flex flex-col justify-between">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-start gap-12 mr-24 pb-20">
           <div className="w-full max-w-[332px] md:text-left">
@@ -14,23 +14,8 @@ export const Footer = () => {
             <h4 className="text-[12px] font-normal uppercase mb-8 tracking-wide">Company</h4>
             <ul className="space-y-5 text-[16px]">
               <li>
-                <a href="#" className="hover:underline">
-                  Cookie Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Privacy Policy
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
+                <a href="/terms-of-use" className="hover:underline">
                   Terms and Conditions
-                </a>
-              </li>
-              <li>
-                <a href="#" className="hover:underline">
-                  Website Security
                 </a>
               </li>
               <li>
