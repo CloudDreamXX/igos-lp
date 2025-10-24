@@ -5,14 +5,14 @@ export const TermsOfUse = () => {
             <header className="flex justify-between items-center py-6 px-6 border-b">
                 <div className="flex items-center gap-2">
                     <img
-                        src="/logo.svg"
+                        src="/assets/icons/logo.svg"
                         alt="Igos"
                         className="w-[150px] h-auto"
                     />
                 </div>
                 <a
                     href="/contact-us"
-                    className="border border-[#ffa894] text-[#212945] rounded-full px-6 py-2 text-sm font-medium hover:bg-[#f2f3f5] transition"
+                    className="border border-[#212945] text-[#212945] rounded-full px-[25px] py-[9px] text-[19px] hover:bg-[#f2f3f5] transition"
                 >
                     Contact Us ↗
                 </a>
@@ -33,8 +33,8 @@ export const TermsOfUse = () => {
                     <strong>IGOS</strong> (<strong>"IGOS"</strong>, <strong>"we"</strong> or{" "}
                     <strong>"us"</strong>) collects and otherwise processes personal data
                     about you as a visitor and user of{" "}
-                    <a href="https://igos.com/" className="text-blue-600 hover:underline">
-                        https://igos.com/
+                    <a href="https://igos.io/" className="text-blue-600 hover:underline">
+                        https://igos.io/
                     </a>{" "}
                     (hereinafter the <strong>“Website”</strong>).
                 </p>
@@ -46,8 +46,8 @@ export const TermsOfUse = () => {
                             <strong>1.1</strong> The purpose of the present Terms of Use is to
                             define the rights and obligations of any person browsing (hereinafter
                             the <strong>"User"</strong>) the Website{" "}
-                            <a href="https://igos.com/" className="text-blue-600 hover:underline">
-                                https://igos.com/
+                            <a href="https://igos.io/" className="text-blue-600 hover:underline">
+                                https://igos.io/
                             </a>
                             . The purpose of the Website is to present the services offered by IGOS
                             under its IGOS trademark.
@@ -79,8 +79,8 @@ export const TermsOfUse = () => {
                         <p className="ml-10">
                             <strong>3.1.1</strong> IGOS's Website is located at the following
                             address:{" "}
-                            <a href="https://igos.com/" className="text-blue-600 hover:underline">
-                                https://igos.com/
+                            <a href="https://igos.io/" className="text-blue-600 hover:underline">
+                                https://igos.io/
                             </a>
                             .
                         </p>
