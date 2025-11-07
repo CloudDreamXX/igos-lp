@@ -13,7 +13,7 @@ import {
 } from "../../components/animate-ui/components/radix/dialog";
 
 type Props = {
-    triggerStyles?: React.ReactNode;
+    triggerStyles?: string;
 }
 
 export const ContactUs: React.FC<Props> = ({ triggerStyles }) => {
