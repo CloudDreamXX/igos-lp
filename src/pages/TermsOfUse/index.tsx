@@ -1,5 +1,4 @@
 import { ContactUs } from "../../widgets/HeroSection/ContactUs";
-import { Button } from "../../components/animate-ui/primitives/buttons/button";
 
 export const TermsOfUse = () => {
     return (
