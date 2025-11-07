@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { XIcon } from 'lucide-react';
 
 import {
@@ -21,8 +20,8 @@ import {
   type DialogTriggerProps as DialogTriggerPrimitiveProps,
   type DialogOverlayProps as DialogOverlayPrimitiveProps,
   type DialogCloseProps as DialogClosePrimitiveProps,
-} from '@/components/animate-ui/primitives/radix/dialog';
-import { cn } from '@/lib/utils';
+} from '../../../../components/animate-ui/primitives/radix/dialog';
+import { cn } from '../../../../lib/utils';
 
 type DialogProps = DialogPrimitiveProps;
 
