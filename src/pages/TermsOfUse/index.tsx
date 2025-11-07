@@ -5,13 +5,13 @@ export const TermsOfUse = () => {
         <div className="bg-white text-[#1a1a1a] font-sans min-h-screen">
             {/* Header */}
             <header className="flex justify-between items-center py-6 px-6 border-b">
-                <div className="flex items-center gap-2">
+                <a href="/" className="flex items-center gap-2">
                     <img
                         src="/assets/icons/logo.svg"
                         alt="Igos"
                         className="w-[150px] h-auto"
                     />
-                </div>
+                </a>
                 <ContactUs triggerStyles={"bg-white h-[48px] border border-[#212945] text-[#212945] rounded-full px-[25px] py-[9px] text-[19px] hover:bg-[#f2f3f5] transition hover:cursor-pointer"} />
             </header>
 
