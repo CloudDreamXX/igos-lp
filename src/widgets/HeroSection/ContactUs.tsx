@@ -1,14 +1,35 @@
-import { useState } from 'react';
-import { Button } from "../../shared/ui/Button";
+"use client";
 
-type Props = { onClose: () => void; };
+import * as React from "react";
+import { useState } from "react";
+import { Button } from "../../components/animate-ui/components/buttons/button";
+import {
+    Dialog,
+    DialogTrigger,
+    DialogContent,
+    DialogHeader,
+    DialogTitle,
+    DialogDescription,
+} from "../../components/animate-ui/components/radix/dialog";
 
-export const ContactUs: React.FC<Props> = ({ onClose }) => {
-    const [formData, setFormData] = useState({ firstName: '', lastName: '', email: '', message: '' });
+type Props = {
+    triggerStyles?: React.ReactNode;
+}
+
+export const ContactUs: React.FC<Props> = ({ triggerStyles }) => {
+    const [isModalOpen, setIsModalOpen] = useState(false);
+    const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
+        email: "",
+        message: "",
+    });
     const [loading, setLoading] = useState(false);
     const [success, setSuccess] = useState(false);
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+    ) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
@@ -17,34 +38,54 @@ export const ContactUs: React.FC<Props> = ({ onClose }) => {
         setLoading(true);
 
         try {
-            const res = await fetch('/api/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
+            const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(formData),
             });
 
             if (res.ok) {
                 setSuccess(true);
-                setFormData({ firstName: '', lastName: '', email: '', message: '' });
+                setFormData({ firstName: "", lastName: "", email: "", message: "" });
             } else {
-                alert('Failed to send message.');
+                alert("Failed to send message.");
             }
         } catch (err) {
             console.error(err);
-            alert('Something went wrong.');
+            alert("Something went wrong.");
         } finally {
             setLoading(false);
         }
     };
 
     return (
-        <div className="fixed inset-0 bg-black/60 backdrop-blur-sm flex justify-center items-center z-50">
-            <div className="bg-white rounded-2xl shadow-lg w-[90%] md:w-[500px] p-8 relative">
-                <button onClick={onClose} className="absolute top-4 right-4 text-gray-600 hover:text-black cursor-pointer">✕</button>
-                <h2 className="text-2xl font-semibold mb-6 text-center">Contact Us</h2>
+        <Dialog open={isModalOpen} onOpenChange={setIsModalOpen}>
+            {/* Trigger Button */}
+            <DialogTrigger asChild>
+                <Button
+                    onClick={(e: { preventDefault: () => void; }) => {
+                        e.preventDefault();
+                        setIsModalOpen(true);
+                    }}
+                    className={triggerStyles ? triggerStyles : "h-[48px] mt-8 bg-[#1D1C1C] text-white hover:bg-[#2F2F2F] disabled:bg-[#707070] px-8 py-3 text-base rounded-full font-medium transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:cursor-pointer"}
+                >
+                    Contact us
+                </Button>
+            </DialogTrigger>
+
+            {/* Dialog Content */}
+            <DialogContent className="sm:max-w-[500px]">
+                <DialogHeader>
+                    <DialogTitle>Contact Us</DialogTitle>
+                    <DialogDescription>
+                        Fill out the form below and we’ll get back to you shortly.
+                    </DialogDescription>
+                </DialogHeader>
 
                 {success ? (
-                    <p className="text-green-600 text-center">Your message has been sent successfully!</p>
+                    <p className="text-green-600 text-center font-medium">
+                        Your message has been sent successfully!
+                    </p>
                 ) : (
                     <form className="flex flex-col gap-4" onSubmit={handleSubmit}>
                         <div className="flex flex-col md:flex-row gap-4">
@@ -56,12 +97,12 @@ export const ContactUs: React.FC<Props> = ({ onClose }) => {
 
                         <textarea name="message" value={formData.message} onChange={handleChange} placeholder="Message" rows={4} className="border border-gray-300 rounded-md px-4 py-2 outline-none resize-none"></textarea>
 
-                        <Button variant="secondary" size="lg" className="mt-4" disabled={loading}>
+                        <Button className="h-[48px] rounded-full font-medium transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover: cursor-pointer mt-4 px-8 py-3 text-base bg-[#1D1C1C] text-white hover:bg-[#2F2F2F] disabled:bg-[#707070]" disabled={loading}>
                             {loading ? 'Sending...' : 'Send Message'}
                         </Button>
                     </form>
                 )}
-            </div>
-        </div>
+            </DialogContent>
+        </Dialog>
     );
 };
