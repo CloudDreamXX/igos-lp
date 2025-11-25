@@ -5,7 +5,7 @@ interface FeatureSmallCardProps {
 
 export const FeatureSmallCard = ({ title, description }: FeatureSmallCardProps) => {
   return (
-    <div className="bg-transparent text-white w-[145px] md:w-[240px] flex flex-col gap-1 items-start">
+    <div className="bg-transparent text-white w-[145px] md:w-[240px] flex flex-col gap-1 items-start p-[20px]">
       <div className="w-[45px] h-[45px] bg-[#D7BFFF] rounded-md flex items-center justify-center">
         <img src="assets/img/plus-group.png" alt="Plus Icon" />
       </div>
