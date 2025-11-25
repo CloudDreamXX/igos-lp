@@ -63,14 +63,27 @@ export const ContactUs: React.FC<Props> = ({ triggerStyles }) => {
             {/* Trigger Button */}
             <DialogTrigger asChild>
                 <Button
-                    onClick={(e: { preventDefault: () => void; }) => {
+                    onClick={(e) => {
                         e.preventDefault();
                         setIsModalOpen(true);
                     }}
-                    className={triggerStyles ? triggerStyles : "h-[48px] mt-8 bg-[#1D1C1C] text-white hover:bg-[#2F2F2F] disabled:bg-[#707070] px-8 py-3 text-base rounded-full font-medium transition-colors duration-200 disabled:opacity-50 disabled:cursor-not-allowed hover:cursor-pointer"}
+                    className={
+                        `${triggerStyles
+                            ? triggerStyles
+                            : "h-[48px] mt-8 bg-[#1D1C1C] text-white hover:bg-[#2F2F2F] disabled:bg-[#707070]"
+                        }
+        relative overflow-hidden px-8 py-3 rounded-full font-medium group flex items-center justify-center cursor-pointer`
+                    }
                 >
-                    Contact us
+                    <span className="text-base block translate-y-0 group-hover:-translate-y-[150%] transition-all duration-300">
+                        Contact us
+                    </span>
+
+                    <span className="text-base absolute left-0 top-[150%] w-full text-center group-hover:top-1/2 -translate-y-1/2 transition-all duration-300">
+                        Contact us
+                    </span>
                 </Button>
+
             </DialogTrigger>
 
             {/* Dialog Content */}

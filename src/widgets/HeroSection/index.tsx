@@ -1,9 +1,9 @@
-import { motion } from "motion/react";
 import { IgosCard } from "./IgosCard";
 import { PaymentAmountCard } from "./PaymentAmountCard";
 import { PaymentSuccessChart } from "./PaymentSuccessChart";
 import Plus from "../../shared/ui/icons/plus";
 import { ContactUs } from "./ContactUs";
+import { motion, useScroll, useTransform } from "motion/react";
 
 import {
   DropdownMenu,
@@ -30,14 +30,18 @@ const float = {
 };
 
 const HeroSection = () => {
+  const { scrollY } = useScroll();
+
+  const bgY = useTransform(scrollY, [0, 500], [0, -120]);
+
+  const contentY = useTransform(scrollY, [0, 500], [0, -60]);
+
   return (
     <div className="relative h-[693px] md:h-screen bg-[linear-gradient(180deg,#FFFFFF_0%,#D7BFFF_50%,#000000_100%)] bg-cover bg-center text-black flex flex-col overflow-hidden">
 
       <motion.div
+        style={{ y: bgY }}
         className="absolute inset-0 bg-[url('/assets/img/bg-illustration.svg')] bg-cover bg-center opacity-30"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 0.3 }}
-        transition={{ duration: 1 }}
       />
 
       <nav className="relative flex items-center justify-between px-4 md:px-8 md:py-8 py-4 z-10">
@@ -55,10 +59,11 @@ const HeroSection = () => {
             <motion.a
               key={item}
               href={item === "Docs" ? "#" : `#${item.toLowerCase()}`}
-              className="hover:scale-[1.05] transition-transform duration-200 hover:text-gray-700 transition-colors cursor-pointer"
+              className="hover:text-gray-700 transition-colors cursor-pointer"
               whileTap={{ scale: 0.95 }}
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
+              whileHover={{ scale: 1.1 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
               transition={{ delay: 0.3 + i * 0.1 }}
             >
               {item}
@@ -96,6 +101,7 @@ const HeroSection = () => {
       </nav>
 
       <motion.div
+        style={{ y: contentY }}
         className="flex flex-col items-center text-center mt-14 md:mt-4 px-6 z-10"
         {...fadeInUp}
       >
@@ -119,6 +125,7 @@ const HeroSection = () => {
       </motion.div>
 
       <motion.div
+        style={{ y: contentY }}
         className="relative mt-auto md:mt-16 mb-12 md:mb-0 flex justify-center"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
@@ -132,24 +139,48 @@ const HeroSection = () => {
           />
 
           <motion.div
-            className="hover:scale-[1.05] transition-transform duration-200 absolute z-20 -top-24 lg:-top-28 -left-32 lg:-left-48 scale-30 lg:scale-100"
+            className="absolute z-20 -top-24 lg:-top-28 -left-32 lg:-left-48 scale-30 lg:scale-100"
             animate={float.animate}
+            whileHover={{
+              scale: [null, 1.1, 1.4],
+              transition: {
+                duration: 0.5,
+                times: [0, 0.6, 1],
+                ease: ["easeInOut", "easeOut"],
+              },
+            }}
           >
             <IgosCard />
           </motion.div>
 
           <motion.div
-            className="hover:scale-[1.05] transition-transform duration-200 absolute z-20 lg:-left-20 left-1/2 -translate-x-1/2 lg:translate-0 bottom-0 lg:bottom-[50px] scale-30 lg:scale-100"
+            className="absolute z-20 lg:-left-20 left-1/2 -translate-x-1/2 lg:translate-0 bottom-0 lg:bottom-[50px] scale-30 lg:scale-100"
             animate={float.animate}
+            whileHover={{
+              scale: [null, 1.1, 1.4],
+              transition: {
+                duration: 0.5,
+                times: [0, 0.6, 1],
+                ease: ["easeInOut", "easeOut"],
+              },
+            }}
             transition={{ delay: 0.3 }}
           >
             <PaymentAmountCard />
           </motion.div>
 
           <motion.div
-            className="hover:scale-[1.05] transition-transform duration-200 absolute z-20 w-[324px] -right-36 lg:-right-40 bottom-0 lg:bottom-[120px] scale-30 lg:scale-100"
+            className="absolute z-20 w-[324px] -right-36 lg:-right-40 bottom-0 lg:bottom-[120px] scale-30 lg:scale-100"
             animate={float.animate}
             transition={{ delay: 0.6 }}
+            whileHover={{
+              scale: [null, 1.1, 1.4],
+              transition: {
+                duration: 0.5,
+                times: [0, 0.6, 1],
+                ease: ["easeInOut", "easeOut"],
+              },
+            }}
           >
             <PaymentSuccessChart />
           </motion.div>
