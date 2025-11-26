@@ -133,68 +133,66 @@ export const PaymentsSection = () => {
             data, turning it into actionable spending patterns.</motion.p>
         </div>
 
-        <Parallax className="w-full" offset={160}>
-          <div className="relative w-full md:w-1/2 flex justify-center items-center py-10 overflow-visible perspective-[1000px]">
-            <img
-              src={'assets/img/bg_vector-1.png'}
-              alt="Line decor"
-              className="absolute left-1/2 top-1/2 w-full transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-10 scale-x-[-1]"
-            />
+        <Parallax className="relative w-full md:w-1/2 flex justify-center items-center py-10 overflow-visible perspective-[1000px]" offset={160}>
+          <img
+            src={'assets/img/bg_vector-1.png'}
+            alt="Line decor"
+            className="absolute left-1/2 top-1/2 w-full transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-10 scale-x-[-1]"
+          />
 
-            {/* Far left card (deepest layer) */}
-            <motion.img
-              src="assets/img/card.png"
-              className="absolute left-[-180px] top-1/2 -translate-y-1/2 rounded-xl shadow-2xl w-56 md:w-[360px] transform scale-75 translate-z-[-160px] blur-md opacity-40"
-              initial={{ opacity: 0, y: 80, rotateX: -12, scale: 0.85 }}
-              whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 0.75 }}
-              viewport={{ once: true, margin: "-120px" }}
-              transition={{ duration: 1.1, delay: 0.3 }}
-            />
+          {/* Far left card (deepest layer) */}
+          <motion.img
+            src="assets/img/card.png"
+            className="absolute left-[-180px] top-1/2 -translate-y-1/2 rounded-xl shadow-2xl w-56 md:w-[360px] transform scale-75 translate-z-[-160px] blur-md opacity-40"
+            initial={{ opacity: 0, y: 80, rotateX: -12, scale: 0.85 }}
+            whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 0.75 }}
+            viewport={{ once: true, margin: "-120px" }}
+            transition={{ duration: 1.1, delay: 0.3 }}
+          />
 
-            {/* Mid left card */}
-            <motion.img
-              src="assets/img/card.png"
-              className="absolute left-[-60px] top-1/2 -translate-y-1/2 rounded-xl shadow-2xl w-64 md:w-[420px] transform scale-90 translate-z-[-100px] blur-sm opacity-70"
-              initial={{ opacity: 0, y: 70, rotateX: -8, scale: 0.9 }}
-              whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 0.9 }}
-              viewport={{ once: true, margin: "-120px" }}
-              transition={{ duration: 1, delay: 0.2 }}
-            />
+          {/* Mid left card */}
+          <motion.img
+            src="assets/img/card.png"
+            className="absolute left-[-60px] top-1/2 -translate-y-1/2 rounded-xl shadow-2xl w-64 md:w-[420px] transform scale-90 translate-z-[-100px] blur-sm opacity-70"
+            initial={{ opacity: 0, y: 70, rotateX: -8, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 0.9 }}
+            viewport={{ once: true, margin: "-120px" }}
+            transition={{ duration: 1, delay: 0.2 }}
+          />
 
-            {/* Center card (main focus) */}
-            <motion.img
-              src="assets/img/card.png"
-              className="relative z-20 rounded-xl shadow-2xl w-72 md:w-[520px]"
-              initial={{ opacity: 0, y: 60, rotateX: -5, scale: 0.95 }}
-              whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
-              viewport={{ once: true, margin: "-120px" }}
-              transition={{
-                duration: 0.9,
-                delay: 0.1,
-              }}
-            />
+          {/* Center card (main focus) */}
+          <motion.img
+            src="assets/img/card.png"
+            className="relative z-20 rounded-xl shadow-2xl w-72 md:w-[520px]"
+            initial={{ opacity: 0, y: 60, rotateX: -5, scale: 0.95 }}
+            whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 1 }}
+            viewport={{ once: true, margin: "-120px" }}
+            transition={{
+              duration: 0.9,
+              delay: 0.1,
+            }}
+          />
 
-            {/* Mid right card */}
-            <motion.img
-              src="assets/img/card.png"
-              className="absolute right-[-60px] top-1/2 -translate-y-1/2 rounded-xl shadow-2xl w-64 md:w-[420px] transform scale-90 translate-z-[-100px] blur-sm opacity-70"
-              initial={{ opacity: 0, y: 70, rotateX: -8, scale: 0.9 }}
-              whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 0.9 }}
-              viewport={{ once: true, margin: "-120px" }}
-              transition={{ duration: 1, delay: 0.2 }}
-            />
+          {/* Mid right card */}
+          <motion.img
+            src="assets/img/card.png"
+            className="absolute right-[-60px] top-1/2 -translate-y-1/2 rounded-xl shadow-2xl w-64 md:w-[420px] transform scale-90 translate-z-[-100px] blur-sm opacity-70"
+            initial={{ opacity: 0, y: 70, rotateX: -8, scale: 0.9 }}
+            whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 0.9 }}
+            viewport={{ once: true, margin: "-120px" }}
+            transition={{ duration: 1, delay: 0.2 }}
+          />
 
-            {/* Far right card (deepest layer) */}
-            <motion.img
-              src="assets/img/card.png"
-              className="absolute right-[-180px] top-1/2 -translate-y-1/2 rounded-xl shadow-2xl w-56 md:w-[360px] transform scale-75 translate-z-[-160px] blur-md opacity-40"
-              initial={{ opacity: 0, y: 80, rotateX: -12, scale: 0.85 }}
-              whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 0.75 }}
-              viewport={{ once: true, margin: "-120px" }}
-              transition={{ duration: 1.1, delay: 0.3 }}
-            />
+          {/* Far right card (deepest layer) */}
+          <motion.img
+            src="assets/img/card.png"
+            className="absolute right-[-180px] top-1/2 -translate-y-1/2 rounded-xl shadow-2xl w-56 md:w-[360px] transform scale-75 translate-z-[-160px] blur-md opacity-40"
+            initial={{ opacity: 0, y: 80, rotateX: -12, scale: 0.85 }}
+            whileInView={{ opacity: 1, y: 0, rotateX: 0, scale: 0.75 }}
+            viewport={{ once: true, margin: "-120px" }}
+            transition={{ duration: 1.1, delay: 0.3 }}
+          />
 
-          </div>
         </Parallax>
       </div>
     </section>
