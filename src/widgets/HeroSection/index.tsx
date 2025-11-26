@@ -59,9 +59,7 @@ const HeroSection = () => {
             <motion.a
               key={item}
               href={item === "Docs" ? "#" : `#${item.toLowerCase()}`}
-              className="hover:text-gray-700 transition-colors cursor-pointer"
-              whileTap={{ scale: 0.95 }}
-              whileHover={{ scale: 1.1 }}
+              className="hover:scale-[1.1] transition-colors cursor-pointer"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               transition={{ delay: 0.3 + i * 0.1 }}
@@ -142,10 +140,10 @@ const HeroSection = () => {
             className="absolute z-20 -top-24 lg:-top-28 -left-32 lg:-left-48 scale-30 lg:scale-100"
             animate={float.animate}
             whileHover={{
-              scale: [null, 1.1, 1.4],
+              scale: [null, 1.4],
               transition: {
                 duration: 0.5,
-                times: [0, 0.6, 1],
+                times: [0, 1],
                 ease: ["easeInOut", "easeOut"],
               },
             }}

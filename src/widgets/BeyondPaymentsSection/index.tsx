@@ -92,10 +92,10 @@ export const BeyondPaymentsSection = () => {
                 },
               }}
               whileHover={{
-                scale: [null, 1.1, 1.4],
+                scale: [null, 1.4],
                 transition: {
                   duration: 0.5,
-                  times: [0, 0.6, 1],
+                  times: [0, 1],
                   ease: ["easeInOut", "easeOut"],
                 },
               }}
